@@ -3,11 +3,25 @@
   <head>
     <meta charset="utf8" />
     <title>srus // Simple Ruby URL Shortener</title>
+    <link rel="shortcut icon" href="/images/favicon.png" /><!--TODO-->
+    <link rel="apple-touch-icon" href="/images/favicon.png" /><!--TODO-->
+    <link rel="stylesheet" type="text/css" href="/css/reset.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="/css/style.css" media="screen" />
+    <link href='http://fonts.googleapis.com/css?family=Arvo:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
   </head>
   <body>
-    <h1>srus</h1>
-    
-    <%= yield %>
-    
+    <div id="wrapper">
+      <div id="header">
+        <h1><a href="/">srus</a> <span>// Simple Ruby URL Shortener</span></h1>
+      </div><!-- #header -->
+
+      <div id="sheet">
+        <%= yield %>
+      </div><!-- #sheet -->
+
+      <div id="footer">
+        <p>srus // Simple Ruby URL Shortener by Nikola Kantar</p>
+      </div><!-- #footer -->
+    </div><!-- #wrapper -->
   </body>
 </html>

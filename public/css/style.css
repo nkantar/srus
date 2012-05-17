@@ -1,0 +1,109 @@
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+}
+strong {
+  font-weight: 700;
+  font-style: inherit;
+}
+em {
+  font-weight: inherit;
+  font-style: italic;
+}
+
+body {
+  font-family: 'Arvo', serif;
+  text-align: center;
+}
+
+#wrapper {
+  margin: 25px auto 25px auto;
+  width: 700px;
+}
+
+#header {
+  border-bottom: 5px solid #dddddd;
+}
+#header a {
+  color: #000000;
+  text-decoration: none;
+}
+#header h1 {
+  font-size: 64px;
+  font-weight: 700;
+}
+#header h1 span {
+  font-size: 18px;
+  font-weight: 400;
+}
+
+#sheet {
+  margin: 25px 0;
+  font-size: 14px;
+  text-align: left;
+}
+#sheet h2 {
+  font-size: 24px;
+  border-bottom: 1px dashed #dddddd;
+}
+#content {
+  margin: 15px 0;
+  line-height: 21px;
+}
+#sheet table {
+  width: 100%;
+  background: #eeeeee;
+  color: #444444;
+}
+#sheet tr:hover {
+  background: #dddddd;
+}
+#sheet tr.top, #sheet tr.top:hover {
+  background: #ffffff;
+  font-size: 14px;
+  color: #000000;
+  font-style: italic;
+}
+#sheet tr.top td {
+  padding-top: 0;
+  padding-bottom: 5px;
+}
+#sheet td {
+  padding: 5px 5px;
+  border-bottom: 2px solid #ffffff;
+}
+td.col_id {
+  width: 5%;
+  text-align: center;
+}
+td.col_url {
+  width: 75%;
+}
+td.col_short {
+  width: 10%;
+  text-align: center;
+}
+td.col_del {
+  width: 10%;
+  text-align: center;
+}
+td.col_del a:link { color: #cccccc; text-decoration: none; }
+td.col_del a:visited { color: #cccccc; text-decoration: none;}
+td.col_del a:hover { color: #000000; text-decoration: none; }
+td.col_del a:active { color: #000000; text-decoration: none; }
+#sheet p {
+  border-top: 1px dashed #dddddd;
+  padding-top: 5px;
+  font-size: 12px;
+}
+label.new {
+  width: 70px;
+  display: inline-block;
+}
+
+#footer {
+  border-top: 5px solid #dddddd;
+  padding-top: 15px;
+}
+#footer p {
+  font-size: 10px;
+}

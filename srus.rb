@@ -46,13 +46,34 @@ end
 post '/new/?' do
   protected!
   l = Link.new
-  l.link = params[:link]
+  if params[:link].start_with?("ftp://", "ftps://", "http://", "https://", "rsync://", "telnet://", "afp://", "cvs://", "git://", "irc://", "ssh://", "sftp://", "svn://", "udp://")
+    l.link = params[:link]
+  else
+    l.link = "http://" << params[:link]
+  end
   l.short = params[:short]
   l.save
   redirect '/'
 end
 
 get '/:linkhash' do
-  @link = Link.first(:short => params[:linkhash])
-  redirect @link.link, 303
+  if @link = Link.first(:short => params[:linkhash])
+    redirect @link.link, 303
+  else
+    erb :'404'
+  end
+end
+
+get '/del/:id' do
+  l = Link.first(:id => params[:id])
+  l.destroy
+  redirect '/'
+end
+
+not_found do
+  erb :'404'
+end
+
+error do
+  erb :'500'
 end

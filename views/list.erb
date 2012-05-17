@@ -1,4 +1,20 @@
-<% @links.each do |link| %>
-  <h3><%= link.id %></h3>
-  <p><%= link.link %><br /><%= link.short %></p>
-<% end %>
+<h2>List</h2>
+<div id="content">
+  <table>
+    <tr class="top">
+      <td class="col_id">#</td>
+      <td class="col_url">URL</td>
+      <td class="col_short">Shortcut</td>
+      <td class="col_del">Delete</td>
+    </tr>
+    <% @links.each do |link| %>
+      <tr>
+        <td class="col_id"><%= link.id %></td>
+        <td class="col_url"><a target="blank" href="/<%= link.short %>"><%= link.link %></a></td>
+        <td class="col_short"><%= link.short %></td>
+        <td class="col_del"><a href="/del/<%= link.id %>">&times;</a></td>
+      </tr>
+    <% end %>
+  </table>
+</div><!-- #content -->
+<p><strong><%= @links.count %></strong> links found in the database</p>

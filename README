@@ -1,23 +1,36 @@
-**************************************************
+*****************************************************************************
 
-srus // Simple Ruby URL Shortener
+srus v0.2 // Simple Ruby URL Shortener
 by Nikola Kantar (nkantar.com)
 
-URL shortener written in Ruby (with the help of Sinatra and DataMapper). Intended for personal use
+URL shortener written in Ruby (with the help of Sinatra and DataMapper).
+Intended for personal use - not by multiple people.
 
 Version history and feature wishlist below.
 
-**************************************************
+*****************************************************************************
 
 To-do
 
 - session-based auth
-- custom 404
-- design
 - random link hashes if no input provided
-- link deletion
+- click to copy short urls
+- link disabling
+- link sorting
+- link editing
 
-**************************************************
+*****************************************************************************
+
+Version 0.2
+
++ deleting links
++ custom 404
++ custom 500
++ design
++ click link in list to load in new tab
++ if no protocol, assume http
+
+*****************************************************************************
 
 Version 0.1 (Mon May 14 2012)
 
@@ -26,4 +39,4 @@ Version 0.1 (Mon May 14 2012)
 + retrieving links
 + basic http auth for everything except retrieving
 
-**************************************************
+*****************************************************************************

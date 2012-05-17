@@ -1,5 +1,10 @@
-<form action="/new" method="post">
-  <label>url</label><input type="text" name="link"></input>
-  <label>hash</label><input type="text" name="short"></input>
-  <input type="submit">
-</form>
+<h2>New</h2>
+<div id="content">
+  <form action="/new" method="post">
+    <label for="link" class="new">URL</label>
+    <input type="text"class="new"  size="80" name="link" placeholder="http://www.google.com/"><br />
+    <label for="short" class="new">Shortcut</label>
+    <input type="text" class="new" size="4" name="short" placeholder="goog"></label><br />
+    <input type="submit" class="new" value="Add">
+  </form>
+</div><!-- #content -->
